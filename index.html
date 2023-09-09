@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="Favi.png" type="image/png">
+    <title>Welcome to CodeX</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            background: linear-gradient(to right, teal, navy, blue);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            color: white;
+        }
+
+        .content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .founders {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .founder {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to right, teal, blue);
+            border: 2px solid black; /* Added a border */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .meetings {
+            background-color: #f0f9fb;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: linear-gradient(to right, teal, gold);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Added a class for registration form styling */
+        .register-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Added styling for form inputs and button */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-button {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to CodeX</h1>
+    </div>
+
+    <div class="content">
+        <p>Dear Ongata Senior Students,</p>
+        <p>Welcome to <strong>CodeX</strong> - where innovation meets creativity in the world of coding!</p>
+        <p>Founded by Jayden Mwandu, Jason Chiwo, John Main, George Nguli, Eugene Kiprono, Jeremy Kiarie, Jack Emmanuel, Brytin Muli, and Kyle Sairo, guided by Mr. James Oira, our club is your gateway to shaping the future.</p>
+        <div class="founders">
+            <div class="founder">Jayden Mwandu</div>
+            <div class="founder">Jason Chiwo</div>
+            <div class="founder">John Maina</div>
+            <div class="founder">George Nguli</div>
+            <div class="founder">Eugene Kiprono</div>
+            <div class="founder">Jeremy Kiarie</div>
+            <div class="founder">Jack Emmanuel</div>
+            <div class="founder">Bryton Muli</div>
+            <div class="founder">Kyle Sairo</div>
+        </div>
+    </div>
+
+    <div class="meetings">
+        <p><strong>Club Meetings:</strong></p>
+        <p>Join us at designated club times for exciting coding sessions!</p>
+        <p>Location: Computer Lab 2</p>
+        <p>Time: 1:50 PM - 2:40 PM</p>
+        <p>Days: Every Tuesday and Thursday</p>
+    </div>
+<div class="registration">
+    <div class="register-box">
+        <h2>Register for CodeX</h2>
+        <input type="text" placeholder="Name">
+    <h6>Class:</h6>    <select id="class-dropdown" placeholder="Class">
+            <option value="Form One">Form One</option>
+            <option value="Form Two">Form Two</option>
+            <option value="Form Three">Form Three</option>
+        </select>
+        <input type="text" placeholder="Admission Number">
+        <button class="register-button" onclick="register()">Register</button>
+    </div>
+</div>
+
+<footer>
+    <!-- Footer content -->
+</footer>
+
+<script>
+    function register() {
+        var name = document.querySelector(".register-box input[placeholder='Name']").value;
+        var className = document.querySelector("#class-dropdown").value;
+        var admissionNumber = document.querySelector(".register-box input[placeholder='Admission Number']").value;
+        var subject = "CodeX Registration";
+        var body = "Name: " + name + "%0D%0AClass: " + className + "%0D%0AAdmission Number: " + admissionNumber;
+        window.location.href = "mailto:luvdom.ke@gmail.com?subject=" + subject + "&body=" + body;
+    }
+</script>
+
+</body>
+</html>
